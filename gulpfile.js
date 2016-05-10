@@ -31,23 +31,6 @@ gulp.task( 'rucksack', function () {
       .pipe( gulp.dest( paths.stylesDestination ) );
 } );
 
-// gulp.task( 'typography', function () {
-//   var processors = [
-//       atimport,
-//     autoprefixer( {
-//       browsers: [ 'last 3 versions' ]
-//     } )
-//   ];
-//   return gulp.src( paths.stylesSource + '*.styl' )
-//       .pipe( sourcemaps.init() )
-//       .pipe( plumber() )
-//       .pipe( postcss( processors ) )
-//       .pipe( sourcemaps.write( './' ) )
-//       .pipe( gulp.dest( paths.stylesDestination ) )
-//       .pipe( connect.reload() );
-//
-// } );
-
 gulp.task( 'images', function () {
   return gulp.src( paths.imagesSrc + '*' )
       .pipe( imagemin() )
@@ -79,8 +62,6 @@ gulp.task( 'html', function () {
 gulp.task( 'watch', function () {
   gulp.watch( paths.stylesSource + '*.styl', [ 'styles' ] );
   gulp.watch( paths.imagesSrc + '*', [ 'images' ] );
-  // gulp.watch( paths.stylesSource + 'grid.css', [ 'grid' ] );
-  // gulp.watch( paths.stylesSource + '*.styl', [ 'typography' ] );
   gulp.watch( [ paths.html + '*.html' ], [ 'html' ] );
 } );
 
