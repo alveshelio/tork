@@ -1,5 +1,6 @@
 var gulp = require( 'gulp' );
 var stylus = require( 'gulp-stylus' );
+var nib = require( 'nib' );
 var postcss = require( 'gulp-postcss' );
 var plumber = require( 'gulp-plumber' );
 var autoprefixer = require( 'autoprefixer' );
@@ -25,9 +26,17 @@ gulp.task( 'connect', function () {
 } );
 
 gulp.task( 'rucksack', function () {
+  var processors = [
+    lost(),
+    autoprefixer( {
+      browsers: [ 'last 3 versions' ]
+    } )
+  ];
   return gulp.src( paths.stylesSource + '*.styl' )
-      .pipe( stylus() )
+      .pipe( plumber() )
+      .pipe( stylus( { use: [ nib() ] } ) )
       .pipe( rucksack() )
+      .pipe( postcss( processors ) )
       .pipe( gulp.dest( paths.stylesDestination ) );
 } );
 
@@ -47,6 +56,7 @@ gulp.task( 'styles', function () {
   return gulp.src( paths.stylesSource + '*.styl' )
       .pipe( sourcemaps.init() )
       .pipe( plumber() )
+      .pipe( stylus( { use: [ nib() ] } ) )
       .pipe( postcss( processors ) )
       .pipe( sourcemaps.write( './' ) )
       .pipe( gulp.dest( paths.stylesDestination ) )
