@@ -1,0 +1,38 @@
+@require 'extras/variables'
+@require 'typographic'
+@require 'rupture'
+@require 'nib'
+
+reset()
+normalize-html5()
+
+//typographic()
+
+// Rupture - Breaking Points
+rupture.scale = 0 320px 480px 768px 1024px 1180px
+rupture.scale-names = 'xs' 's' 'm' 'l' 'xl'
+
+html
+  font-family: $base__fntfml
+
+  body
+    margin: 0
+
+
+
+  .btn
+    border-radius: 22px
+    color: #fff
+    display: inline-block
+    font-weight: $fw__400
+    line-height: 44px
+    text-decoration: none
+    width: auto
+
+  .btn__green
+    background: $btn__green-bg
+    font-size: $btn__green-fs
+    padding: 0 50px
+
+
+// Section Top

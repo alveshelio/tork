@@ -1,0 +1,52 @@
+article,
+details,
+section,
+summary,
+aside,
+main,
+menu,
+nav,
+figcaption,
+figure,
+footer,
+header,
+hgroup {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+html {
+  font-family: 'Open Sans';
+}
+html body {
+  margin: 0;
+}
+html .btn {
+  border-radius: 22px;
+  color: #fff;
+  display: inline-block;
+  font-weight: 400;
+  line-height: 44px;
+  text-decoration: none;
+  width: auto;
+}
+html .btn__green {
+  background: #3dd2ae;
+  font-size: 14px;
+  padding: 0 50px;
+}
+
+/*# sourceMappingURL=styles.css.map */
