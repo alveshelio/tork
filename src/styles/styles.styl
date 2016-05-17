@@ -1,38 +1,205 @@
+@lost flexbox flex
+* { box-sizing: border-box; }
+
 @require 'extras/variables'
-@require 'typographic'
+////@require 'typographic'
 @require 'rupture'
 @require 'nib'
 
-reset()
 normalize-html5()
-
-//typographic()
 
 // Rupture - Breaking Points
 rupture.scale = 0 320px 480px 768px 1024px 1180px
-rupture.scale-names = 'xs' 's' 'm' 'l' 'xl'
+rupture.scale-names = 'xs' 'sm' 'md' 'lg' 'xl'
 
-html
+.btn
+  border-radius: 22px
+  color: #fff
+  display: inline-block
+  font-weight: $fw__400
+  line-height: 44px
+  text-decoration: none
+  width: 162px
+
+.btn__green
+  background: $btn__green-bg
+  font-size: $btn__green-fs
+  padding: 0 50px
+
+body
   font-family: $base__fntfml
+  margin: 0
 
-  body
-    margin: 0
+////////////////////// Header //////////////////////
+header
+  background: url('../img/top-bg.jpg') no-repeat center center
+  background-size: cover
+  lost-utility: clearfix
 
+  section
+    clearfix()
+  // Top
+  .top
+    padding: 46px 70px 0 70px
+    lost-column: 1/1
 
+    .top__logo
+      float: left
 
-  .btn
-    border-radius: 22px
+    .top__right
+      float: right
+      padding-top: 10px
+
+      .top__right__left
+        position: relative
+        float: left
+
+        input
+          background: #343c48
+          border: none
+          border-radius: 22px
+          color: $input__search-clr
+          font-size: 14px
+          height: 44px
+          line-height: 44px
+          padding: 0 40px 0 20px
+          position: absolute
+          top: 0
+          right: 0
+          width: 262px
+
+        &:focus
+          outline: none
+
+        i
+          color: #b2b2b2
+          position: absolute
+          top: 13px
+          right: 19px
+
+      .top__right__right
+        color: #fff
+        float: right
+        margin-left: 23px
+
+        .btn__magenta
+          background: $btn__magenta-bg
+          font-size: $btn__magenta-fs
+          padding: 0 30px
+
+        i
+          margin-left: 23px
+          font-size: 20px
+
+  //End Top
+
+  // Header Content
+  .top__content
     color: #fff
-    display: inline-block
-    font-weight: $fw__400
-    line-height: 44px
-    text-decoration: none
-    width: auto
+    lost-center: $container__width $gutter__l
+    padding-bottom: 100px
 
-  .btn__green
-    background: $btn__green-bg
-    font-size: $btn__green-fs
-    padding: 0 50px
+    +above(lg)
+      padding-bottom: 244px
+
+    div
+      width: auto
+      margin-left: auto
+
+      h1
+        font-size: 34px
+
+        +above(lg)
+          font-size: 70px
 
 
-// Section Top
+//End Header Content
+
+//////////////////// End Header /////////////////////
+
+/////////////////////// Main ////////////////////////
+
+// App Demo
+
+main
+  section
+    div
+      lost-center: $container__width $gutter__l
+
+main
+  .app-demo
+    background: #835fa8
+
+    div
+      //lost-center: $container__width $gutter__l
+
+      div
+        lost-column: 1/1 1 0
+        flex-direction: column
+        color: #fff
+        padding-top: 57px
+        padding-left: 0
+        padding-right: 0
+
+        +above(lg)
+          lost-column: 1/2
+
+        h2
+          margin: 0
+
+          +above(lg)
+            font-size: 40px
+            font-weight: 300
+            line-height: 50px
+
+        p
+          font-size: 16px
+          font-weight: 400
+          line-height: 26px
+
+        img
+          width: 100%
+
+          +above(lg)
+            margin-top: -130px
+
+
+// features
+  .features
+    background: #f4f8fb
+
+    div
+      //padding-top: 30px
+
+      div
+        lost-column: 1/1 1 0
+        flex-direction: column
+        padding: 30px 0
+
+
+        h2, h4
+          margin: 0
+          font-weight: 300
+
+
+  .design
+    background: #232831
+    color: #fff
+
+    div
+
+      div
+        lost-column: 1/1 1 0
+        flex-direction: column
+        padding: 30px 0
+
+        h2
+          font-weight: 300
+
+        p
+          font-weight: 400
+
+        &:last-child
+          padding: 0
+        img
+          width: 100%

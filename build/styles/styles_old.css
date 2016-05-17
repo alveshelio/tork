@@ -403,22 +403,18 @@ html .btn__green {
   padding: 0 50px;
 }
 section.top {
-  *zoom: 1;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
   background: url("../img/top-bg.jpg") no-repeat center center fixed;
   background-size: cover;
   color: #fff;
-}
-section.top:before {
-  content: '';
-  display: table;
-}
-section.top:after {
-  content: '';
-  display: table;
-  clear: both;
 }
 section.top header {
   *zoom: 1;
@@ -434,42 +430,42 @@ section.top header:after {
   clear: both;
 }
 section.top header .logo {
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   width: calc(99.99% * 1/3 - (30px - 30px * 1/3));
   text-align: left;
 }
 section.top header .logo:nth-child(1n) {
-  float: left;
   margin-right: 30px;
-  clear: none;
 }
 section.top header .logo:last-child {
   margin-right: 0;
 }
 section.top header .logo:nth-child(3n) {
-  margin-right: 0;
   float: right;
 }
-section.top header .logo:nth-child(3n + 1) {
-  clear: left;
+section.top header .logo:nth-child(3n) {
+  margin-right: 0;
 }
 section.top header div {
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   width: calc(99.99% * 2/3 - (30px - 30px * 2/3));
   text-align: right;
 }
 section.top header div:nth-child(1n) {
-  float: left;
   margin-right: 30px;
-  clear: none;
 }
 section.top header div:last-child {
   margin-right: 0;
 }
 section.top header div:nth-child(3n) {
-  margin-right: 0;
   float: right;
 }
-section.top header div:nth-child(3n + 1) {
-  clear: left;
+section.top header div:nth-child(3n) {
+  margin-right: 0;
 }
 section.top header div .input__search {
   position: absolute;
@@ -492,22 +488,16 @@ section.top header div .input__search .btn__magenta {
   padding: 0 30px;
 }
 section.top .container {
-  *zoom: 1;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   max-width: 1180px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
   *zoom: 1;
-}
-section.top .container:before {
-  content: '';
-  display: table;
-}
-section.top .container:after {
-  content: '';
-  display: table;
-  clear: both;
 }
 section.top .container:before {
   content: '';

@@ -12,6 +12,8 @@ var rucksack = require( 'gulp-rucksack' );
 var typographic = require( 'typographic' );
 var rupture = require( 'rupture' );
 
+module.exports = gulp;
+
 var paths = {
   stylesSource: './src/styles/',
   stylesDestination: './build/styles/',

@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 article,
 details,
 section,
@@ -28,25 +31,302 @@ audio:not([controls]) {
 template {
   display: none;
 }
-html {
-  font-family: 'Open Sans';
-}
-html body {
-  margin: 0;
-}
-html .btn {
+.btn {
   border-radius: 22px;
   color: #fff;
   display: inline-block;
   font-weight: 400;
   line-height: 44px;
   text-decoration: none;
-  width: auto;
+  width: 162px;
 }
-html .btn__green {
+.btn__green {
   background: #3dd2ae;
   font-size: 14px;
   padding: 0 50px;
+}
+body {
+  font-family: 'Open Sans';
+  margin: 0;
+}
+header {
+  background: url("../img/top-bg.jpg") no-repeat center center;
+  background-size: cover;
+  *zoom: 1;
+}
+header:before {
+  content: '';
+  display: table;
+}
+header:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+header section {
+  zoom: 1;
+}
+header section:before,
+header section:after {
+  content: "";
+  display: table;
+}
+header section:after {
+  clear: both;
+}
+header .top {
+  padding: 46px 70px 0 70px;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: calc(99.99% * 1/1 - (30px - 30px * 1/1));
+}
+header .top:nth-child(1n) {
+  margin-right: 30px;
+}
+header .top:last-child {
+  margin-right: 0;
+}
+header .top:nth-child(1n) {
+  float: right;
+}
+header .top:nth-child(1n) {
+  margin-right: 0;
+}
+header .top .top__logo {
+  float: left;
+}
+header .top .top__right {
+  float: right;
+  padding-top: 10px;
+}
+header .top .top__right .top__right__left {
+  position: relative;
+  float: left;
+}
+header .top .top__right .top__right__left input {
+  background: #343c48;
+  border: none;
+  border-radius: 22px;
+  color: #9da5b0;
+  font-size: 14px;
+  height: 44px;
+  line-height: 44px;
+  padding: 0 40px 0 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 262px;
+}
+header .top .top__right .top__right__left:focus {
+  outline: none;
+}
+header .top .top__right .top__right__left i {
+  color: #b2b2b2;
+  position: absolute;
+  top: 13px;
+  right: 19px;
+}
+header .top .top__right .top__right__right {
+  color: #fff;
+  float: right;
+  margin-left: 23px;
+}
+header .top .top__right .top__right__right .btn__magenta {
+  background: #835fa8;
+  font-size: 15px;
+  padding: 0 30px;
+}
+header .top .top__right .top__right__right i {
+  margin-left: 23px;
+  font-size: 20px;
+}
+header .top__content {
+  color: #fff;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 100px;
+}
+@media only screen and (min-width: 768px) {
+  header .top__content {
+    padding-bottom: 244px;
+  }
+}
+header .top__content div {
+  width: auto;
+  margin-left: auto;
+}
+header .top__content div h1 {
+  font-size: 34px;
+}
+@media only screen and (min-width: 768px) {
+  header .top__content div h1 {
+    font-size: 70px;
+  }
+}
+main section div {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+main .app-demo {
+  background: #835fa8;
+}
+main .app-demo div div {
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: calc(99.999999% * 1/1);
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #fff;
+  padding-top: 57px;
+  padding-left: 0;
+  padding-right: 0;
+}
+main .app-demo div div:nth-child(1n) {
+  margin-right: 0;
+}
+main .app-demo div div:last-child {
+  margin-right: 0;
+}
+main .app-demo div div:nth-child(1n) {
+  float: right;
+}
+main .app-demo div div:nth-child(1n) {
+  margin-right: 0;
+}
+@media only screen and (min-width: 768px) {
+  main .app-demo div div {
+    -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    width: calc(99.99% * 1/2 - (30px - 30px * 1/2));
+  }
+  main .app-demo div div:nth-child(1n) {
+    margin-right: 30px;
+  }
+  main .app-demo div div:last-child {
+    margin-right: 0;
+  }
+  main .app-demo div div:nth-child(2n) {
+    float: right;
+  }
+  main .app-demo div div:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+main .app-demo div div h2 {
+  margin: 0;
+}
+@media only screen and (min-width: 768px) {
+  main .app-demo div div h2 {
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 50px;
+  }
+}
+main .app-demo div div p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+main .app-demo div div img {
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  main .app-demo div div img {
+    margin-top: -130px;
+  }
+}
+.features {
+  background: #f4f8fb;
+}
+.features div div {
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: calc(99.999999% * 1/1);
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 30px 0;
+}
+.features div div:nth-child(1n) {
+  margin-right: 0;
+}
+.features div div:last-child {
+  margin-right: 0;
+}
+.features div div:nth-child(1n) {
+  float: right;
+}
+.features div div:nth-child(1n) {
+  margin-right: 0;
+}
+.features div div h2,
+.features div div h4 {
+  margin: 0;
+  font-weight: 300;
+}
+.design {
+  background: #232831;
+  color: #fff;
+}
+.design div div {
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: calc(99.999999% * 1/1);
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 30px 0;
+}
+.design div div:nth-child(1n) {
+  margin-right: 0;
+}
+.design div div:last-child {
+  margin-right: 0;
+}
+.design div div:nth-child(1n) {
+  float: right;
+}
+.design div div:nth-child(1n) {
+  margin-right: 0;
+}
+.design div div h2 {
+  font-weight: 300;
+}
+.design div div p {
+  font-weight: 400;
+}
+.design div div:last-child {
+  padding: 0;
+}
+.design div div img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */
